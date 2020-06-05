@@ -48,20 +48,20 @@ res = []
 
 with open("data_file.json", "w") as write_file:
     for current in data:
-        if current["score"] > 0.30:
-            result["Slide"] = current["image_id"]
-            result["Object"] = id_to_ano(current["category_id"])
-            result["Score"] = current["score"]
+        #if current["score"] > 0.30:
+        result["Slide"] = current["image_id"]
+        result["Object"] = id_to_ano(current["category_id"])
+        result["Score"] = current["score"]
 
-            print("Slide number:", end=" ")
-            print(result["Slide"], end=" ")
-            print("Object:", end=" ")
-            print(result["Object"], end=" ")
-            print("Score:", end=" ")
-            print(result["Score"])
+        print("Slide number:", end=" ")
+        print(result["Slide"], end=" ")
+        print("Object:", end=" ")
+        print(result["Object"], end=" ")
+        print("Score:", end=" ")
+        print(result["Score"])
 
-            json.dump(result, write_file)
-            #res.append(result)
+        json.dump(result, write_file)
+        #res.append(result)
 
 
 # Create result json
